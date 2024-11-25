@@ -1,0 +1,16 @@
+<table class="table">
+    <tr>
+        <th>AppartNum</th>
+        <th>fllorNum</th>
+        <th>surface</th>
+        <th>terrace</th>
+        <th>category</th>
+    </tr>
+    <tr *ngFor="let  a of listFilter">
+        <td>{{a.appartNum}}</td>
+        <td>{{a.floorNum}}</td>
+        <td>{{a.surface}}</td>
+        <td>{{a.terrace}}</td>
+        <td>{{a.category}}</td>
+    </tr>
+</table>
