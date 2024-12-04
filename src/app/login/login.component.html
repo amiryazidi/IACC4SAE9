@@ -1,0 +1,67 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">login</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [formControl]="login">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [formControl]="pwd">
+</div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">email</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [formControl]="email">
+</div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">teephone</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [formControl]="telephone">
+</div>
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+</div>
+<button type="submit" class="btn btn-primary" [disabled]="login.invalid || pwd.invalid">Submit</button>
+
+
+
+<h1> FormGroup</h1>
+
+<form [formGroup]="formLogin">
+    <div class="form-group">
+        <label>login</label>
+        <input type="email" class="form-control" placeholder="Enter email" formControlName="login">
+    </div>
+    <div class="alert alert-danger" *ngIf="formLogin.controls['login'].invalid && formLogin.controls['login'].touched">
+        <p *ngIf="formLogin.get('login')?.errors?.['required']">login est obligatoire</p>
+        <p *ngIf="formLogin.controls['login'].hasError('minlength')">login minLength </p>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" formControlName="pwd">
+
+        <div class="alert alert-danger">
+            <p>password obligatoire</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>email</label>
+        <input type="text" class="form-control" placeholder="email" formControlName="email">
+        <div class="alert alert-danger">
+            <p>email obligatoire</p>
+            <p>email doit respecter les normes</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>telephone</label>
+        <input type="text" class="form-control" placeholder="telephone" formControlName="telephone">
+        <div class="alert alert-danger">
+            <p>tel obligatoire</p>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="formLogin.invalid">Submit</button>
+
+</form>
