@@ -1,3 +1,7 @@
+<button [routerLink]="['/addRes']">Add</button>
+
+
+
 <!-- Filtre de recherche -->
 <input type="text" placeholder="Rechercher par adresse" [(ngModel)]="filterAddress" />
 
@@ -26,6 +30,7 @@
                 <!-- Bouton "Like" -->
                 <button (click)="addToFavorites(residence)">Like</button>
                 <button [routerLink]="['/detailR',residence.id]">details</button>
+                <button (click)="supp(residence.id)">Delete</button>
                 <button [routerLink]="['/showAppart',residence.id]">Show Appat</button>
             </div>
 

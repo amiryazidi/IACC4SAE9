@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ResidenceService } from '../services/residence.service';
+import { Residence } from '../core/models/Residence';
 
 @Component({
   selector: 'app-detail-residence',
@@ -9,10 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailResidenceComponent {
 
   id!:number
-    constructor(private act:ActivatedRoute){}
+  residence !:Residence
+    constructor(private act:ActivatedRoute,private rs:ResidenceService){}
 
 
     ngOnInit(){
         this.id=this.act.snapshot.params['id']
+        this.rs.getResidenceById(this.id).subscribe(
+          data => this.residence=data
+        )
+
     }
 }

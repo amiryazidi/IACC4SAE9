@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-detail-prod',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailProdComponent {
     id!: number;
-    constructor(private Act:ActivatedRoute) { }
+    constructor(private Act:ActivatedRoute, private ps :ProductService) { }
 
 
     ngOnInit(){
