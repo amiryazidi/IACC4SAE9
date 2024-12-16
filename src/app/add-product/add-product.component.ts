@@ -26,7 +26,16 @@ export class AddProductComponent {
 
 
     add(){
-     this.ps.products.push(this.formLogin.value as any)
+
+      const product:any ={
+        id:this.formLogin.value.id,
+        title:this.formLogin.value.title,
+        price:this.formLogin.value.price,
+        quantity:this.formLogin.value.quantity,
+        like:this.formLogin.value.like,
+        image:"../../assets/images/iphone1.jpg"
+      }
+     this.ps.products.push(product)
      this.router.navigate(['/product'])
     }
 }

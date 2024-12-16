@@ -1,9 +1,86 @@
 {
   "residences": [
     {
-      "id": "fbe9",
       "name": "test",
-      "address": "aaaaaaaaaaa",
+      "address": "123 Rue des Fleurs, Paris",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Available",
+      "id": "fbe9"
+    },
+    {
+      "id": "a3d1",
+      "name": "Résidence Soleil",
+      "address": "45 Boulevard Lumière, Marseille",
+      "image": "../../assets/images/R2.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "b2c7",
+      "name": "Appartement Émeraude",
+      "address": "88 Avenue des Champs, Lyon",
+      "image": "../../assets/images/R3.jpg",
+      "status": "Vendu"
+    },
+    {
+      "id": "d9e8",
+      "name": "Domaine des Collines",
+      "address": "Colline Verte, Nice",
+      "image": "../../assets/images/R4.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": "e5f4",
+      "name": "Palais Azur",
+      "address": "Plage Bleue, Cannes",
+      "image": "https://www.capgeris.com/img/u/1/combien-coute-la-vie-en-residence-senior.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "c3f9",
+      "name": "Cité des Horizons",
+      "address": "Centre Urbain Nord, Tunis",
+      "image": "https://www.silveralliance.com/wp-content/uploads/2020/10/La-residence-senior-ou-comment-vieillir-chez-soi-autrement.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": "g4h5",
+      "name": "Résidence du Lac",
+      "address": "Berges du Lac, Tunis",
+      "image": "https://res.cloudinary.com/kadran/image/upload/f_auto,c_limit,w_3840,q_auto/v1705393248/kadran/guide/Valoriser/R%C3%A9sidence%20secondaire/qu-est-ce-qui-est-considere-comme-une-residence-secondaire.png",
+      "status": "Vendu"
+    },
+    {
+      "id": "h6i7",
+      "name": "Maison Blanche",
+      "address": "Rue Neuve, Bordeaux",
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492921793.jpg?k=cdfb727fea7ac9ddab5b61cee68560244b14755d4d3ec1ae109acbea912af6f5&o=&hp=1",
+      "status": "Disponible"
+    },
+    {
+      "id": "j8k9",
+      "name": "Résidence El Mechta",
+      "address": "Route 27, Alger",
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492921735.jpg?k=1547f7c1cc418e934c21379cd0b0029302397bab421fcf3a64086723ccfbdb2f&o=&hp=1",
+      "status": "En Construction"
+    },
+    {
+      "name": "amir",
+      "address": "testtesrupda",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Unavailable",
+      "id": "a680"
+    },
+    {
+      "id": "bfc5",
+      "name": "testnewResidence",
+      "address": "nabeulaaaaadd",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Available"
+    },
+    {
+      "id": "b74c",
+      "name": "test",
+      "address": "testetstetst",
       "image": "../../assets/images/R1.jpg",
       "status": "Available"
     }

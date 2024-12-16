@@ -22,4 +22,8 @@ export class DetailResidenceComponent {
         )
 
     }
+
+    navigateToLocation(){
+      window.open(`https://www.google.com/maps/place/${this.residence.address}`,'_blank')
+    }
 }

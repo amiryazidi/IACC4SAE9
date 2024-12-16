@@ -26,12 +26,14 @@ export class ResidenceService {
     return this.http.get<Residence>(`${this.apiEndPoint}/${id}`);
   }
 
-  addResidence(rs : Residence):Observable<any>{
-    return this.http.post(this.apiEndPoint,rs);
+  addResidence(rs : Residence):Observable<Residence>{
+    return this.http.post<Residence>(this.apiEndPoint,rs);
   }
-  
+
   deleteResidence(id:number):Observable<any>{
     return this.http.delete(`${this.apiEndPoint}/${id}`);
   }
-
+  updateResidence(rs:Residence,id:number):Observable<Residence>{
+    return this.http.put<Residence>(this.apiEndPoint+'/'+id,rs)
+  }
 }

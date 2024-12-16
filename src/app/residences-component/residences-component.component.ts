@@ -10,21 +10,18 @@ import { ResidenceService } from '../services/residence.service';
 export class ResidencesComponentComponent {
   filterAddress: string = '';
   favorites: Residence[] = [];
-  listResidences: Residence[] = []
+  listResidences: Residence[] = [];
 
+  constructor(private rs: ResidenceService) {}
 
-  constructor (private rs : ResidenceService){}
-
-  ngOnInit(){
-   // this.listResidences= this.rs.listResidences
-   this.rs.getAllResidences().subscribe({
-    next: (data)=> this.listResidences = data,
-    error: (error)=>console.log(error),
-    complete: ()=>console.log('done')
-   }
-   )
+  ngOnInit() {
+    
+    this.rs.getAllResidences().subscribe({
+      next: (data) => this.listResidences = data,
+      error: (error) => console.log(error),
+      complete: () => console.log('done')
+    });
   }
-  
 
   showLocation(address: string): void {
     if (address === 'inconnu') {
@@ -33,22 +30,21 @@ export class ResidencesComponentComponent {
       console.log("Adresse : " + address);
     }
   }
+
   addToFavorites(residence: Residence) {
     if (!this.favorites.includes(residence)) {
       this.favorites.push(residence);
     }
   }
 
-   // Filtrer les résidences
-   getFilteredResidences(): Residence[] {
+  // Filtrer les résidences
+  getFilteredResidences(): Residence[] {
     return this.listResidences.filter(residence =>
       residence.address.toLowerCase().includes(this.filterAddress.toLowerCase())
     );
   }
 
-  supp(id:number){
-    this.rs.deleteResidence(id).subscribe(
-        () => this.ngOnInit()
-    )
+  supp(id: number) {
+    this.rs.deleteResidence(id).subscribe(() => this.ngOnInit());
   }
 }
